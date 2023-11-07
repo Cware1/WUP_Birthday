@@ -14,3 +14,16 @@ Sam reports that he has made this bet 637 times and he tracks his winnings/losin
 
 I will create a group of prototypes for all February 29th which only happen on years divisble by four (366 days).
 
+```{r}
+numbers <- 1:365
+
+repeated_numbers <- rep(numbers, each = 4)
+
+final_array <- c(repeated_numbers, 366)
+
+array_4_copies <- array(final_array, dim = c(4, 365))
+```
+
+
+
+
