@@ -14,8 +14,7 @@ Sam reports that he has made this bet 637 times and he tracks his winnings/losin
 
 I will create a group of prototypes for all February 29th which only happen on years divisble by four (366 days).
 
-##
-
+##Birthdays
 
 ```{r}
 numbers <- 1:365
@@ -27,14 +26,28 @@ final_array <- c(repeated_numbers, 366)
 array_4_copies <- array(final_array, dim = c(4, 365))
 ```
 
+##Sample Birthdays
 
 ```{r}
 Bdays <- sample(final_array, 35,replace = TRUE)
 ```
 
+##Sorted Birthdays
 
 ```{r}
 print(sort(Bdays))
 ```
+
+
+
+# Check for duplicate birthdays
+```{r}
+if (any(duplicated(Bdays))) {
+  cat("There are duplicate Bdays in the sample.\n")
+} else {
+  cat("All Bdays in the sample are unique.\n")
+}
+```
+
 
 
